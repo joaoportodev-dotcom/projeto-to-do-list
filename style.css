@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* INPUT + BOTÕES */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btnadicionar {
+  width: 100%;
+  background: #4caf50;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#btnLimpar {
+  width: 100%;
+  background: #f44336;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* LISTA */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li span {
+  cursor: pointer;
+}
+
+/* TAREFA CONCLUÍDA */
+.concluida {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* BOTÃO EXCLUIR */
+li button {
+  background: none;
+  font-size: 16px;
+}
+
+li button:hover {
+  color: red;
+}
+
+/* FILTROS */
+#filtros {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+#filtros button {
+  flex: 1;
+  margin: 0 2px;
+  background: #e0e0e0;
+}
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li {
+  animation: surgir 0.3s ease;
+}
+/* TRANSIÇÃO GLOBAL */
+body,
+.container,
+li,
+button,
+input {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* BOTÃO DARK */
+#btnDark {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #333;
+  color: white;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #121212;
+}
+
+body.dark .container {
+  background: #1e1e1e;
+}
+
+body.dark h1,
+body.dark span {
+  color: #f1f1f1;
+}
+
+body.dark input {
+  background: #2a2a2a;
+  color: white;
+  border: none;
+}
+
+body.dark li {
+  background: #2a2a2a;
+}
+
+body.dark button {
+  background: #444;
+  color: white;
+}
+
+body.dark li button {
+  background: none;
+}
+
+/* FILTROS NO DARK MODE */
+body.dark #filtros button {
+  background: #333;
+  color: #fff;
+}
+
+body.dark #filtros button:hover {
+  background: #555;
+}
+#filtros button.ativo {
+  background: #4caf50;
+  color: white;
+}
+
+body.dark #filtros button.ativo {
+  background: #66bb6a;
+  color: black;
+}
+
+
